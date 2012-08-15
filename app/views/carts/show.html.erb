@@ -1,11 +1,10 @@
-
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 
 <div class="cart_title">Your Cart</div>
 <table>
-  <%= @cart.line_items.each do |item| %>
+  <% @cart.line_items.each do |item| %>
     <tr>
 	  <td><%= item.quantity %>&times;</td>
 	  <td><%= item.product.title %></td>
